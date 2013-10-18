@@ -1,0 +1,3 @@
+[submodule "vagrant-sh-provisioner-scripts"]
+	path = vagrant-sh-provisioner-scripts
+	url = git@github.com:rcelha/vagrant-sh-provisioner-scripts.git
