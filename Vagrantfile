@@ -48,4 +48,7 @@ Vagrant::Config.run do |config|
 
     # Some fixes
     config.vm.provision :shell, :path => "custom-scripts/fix.sh"
+
+    # samba
+    config.vm.provision :shell, :path => "vagrant-sh-provisioner-scripts/samba.sh"
 end
