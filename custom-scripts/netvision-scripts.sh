@@ -11,7 +11,12 @@ mkdir -p repos &&
 cd repos && 
 git clone git@github.com:ISPM/netvision.git &&
 cd netvision && 
+git submodule init &&
+git submodule update &&
 python setup.py develop &&
+cd - &&
+cd /home/vagrant/repos/netvision/tools/3rd_party_fixes &&
+./install.sh &&
 cd - &&
 echo \"Netvision is ready\" || (echo erro; exit 1);
 " > /usr/local/bin/netvision-script.sh ;
