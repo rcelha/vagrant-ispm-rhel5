@@ -23,7 +23,7 @@ Vagrant::Config.run do |config|
 	# Provisioner #
 	###############
 
-    config.vm.provision "shell", inline: "chkconfig httpd off; chkconfig httpd --del;"
+    config.vm.provision "shell", inline: "chkconfig httpd off; chkconfig httpd --del; exit 0;"
 
     # Add the ISPMRJ and EPEL repos
     config.vm.provision :shell, :path => "custom-scripts/install-epel-repos.sh"
@@ -64,7 +64,7 @@ Vagrant::Config.run do |config|
     # samba
     config.vm.provision :shell, :path => "vagrant-sh-provisioner-scripts/samba.sh"
 
-    config.vm.provision "shell", inline: "chkconfig smb on; chkconfig smb --add;"
-    config.vm.provision "shell", inline: "chkconfig nginx on; chkconfig nginx --add;"
-    config.vm.provision "shell", inline: "chkconfig rabbitmq-server on; chkconfig rabbitmq-server --add;"
+    config.vm.provision "shell", inline: "chkconfig smb on; chkconfig smb --add; exit 0;"
+    config.vm.provision "shell", inline: "chkconfig nginx on; chkconfig nginx --add; exit 0;"
+    config.vm.provision "shell", inline: "chkconfig rabbitmq-server on; chkconfig rabbitmq-server --add; exit 0;"
 end
