@@ -9,6 +9,3 @@ for i in $scripts; do
 	tr -d '\015' </vagrant/vagrant-sh-provisioner-scripts/bin/$i > /usr/bin/$i;
 	chmod +x /usr/bin/$i;
 done;
-
-# samba restart (vagrant-sh-provisioner only restarts debian based services)
-service smb start;
