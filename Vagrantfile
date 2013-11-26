@@ -17,6 +17,7 @@ Vagrant::Config.run do |config|
 	# config.vm.forward_port guest, host
     config.vm.forward_port 8000, 8000
 	config.vm.forward_port 8080, 8080
+	config.vm.forward_port 1162, 1162, protocol: 'udp'
 
 	###############
 	# Provisioner #
