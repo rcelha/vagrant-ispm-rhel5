@@ -66,6 +66,9 @@ Vagrant::Config.run do |config|
     # Ruby, required to build the netvision rpm
     config.vm.provision :shell, :path => "custom-scripts/install-ruby.sh"
 
+	# Sencha CMD install
+	config.vm.provision :shell, :privileged => false, :path => "custom-scripts/install-senchacmd.sh"
+	
     # samba
     config.vm.provision :shell, :path => "vagrant-sh-provisioner-scripts/samba.sh"
 
