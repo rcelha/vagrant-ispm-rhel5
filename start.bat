@@ -1,2 +1,3 @@
 vagrant up
+
 pause
