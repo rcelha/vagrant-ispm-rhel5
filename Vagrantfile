@@ -70,4 +70,11 @@ Vagrant.configure("2") do |config|
 
     # control the startup scripts
     config.vm.provision "shell", :path => "configure-services-status.sh"
+
+    # install nodejs
+    config.vm.provision :shell, :path => "custom-scripts/install-nodejs-from-source.sh"
+
+    # install madeye see madeye.io
+    config.vm.provision :shell, :path => "custom-scripts/install-madeye-from-npm.sh"
+
 end
