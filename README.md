@@ -1,3 +1,5 @@
+# Descontinuado
+
 # Instalação da VM
 "vagrant up" ou "start.bat"
 
